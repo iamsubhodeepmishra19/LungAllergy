@@ -26,11 +26,13 @@
               <img src="./assets/Group-1707486367.png" alt="logo" />
             </a>
           </div>
-
-          <label for="menu" class="menu">
+          <div class="menu">
+            <span></span>
+          </div>
+          <!-- <label for="menu" class="menu">
             <i class="fa-solid fa-bars"></i>
           </label>
-          <input hidden type="checkbox" name="menu" id="menu" />
+          <input hidden type="checkbox" name="menu" id="menu" /> -->
 
           <div class="nav-collapse">
             <ul>
@@ -537,5 +539,22 @@
       </div>
     </footer>
     <!-- footer-section ends here> -->
+
+    <script>
+      const menu = document.querySelector(".menu");
+      const navbarCollapsed = document.querySelector(".nav-collapse");
+      let open = false;
+      menu.addEventListener("click", () => {
+        if (open) {
+          menu.classList.remove("show");
+          navbarCollapsed.style.right = "-100%";
+          open = false;
+        } else {
+          menu.classList.add("show");
+          navbarCollapsed.style.right = "0";
+          open = true;
+        }
+      });
+    </script>
   </body>
 </html>
