@@ -539,7 +539,7 @@ footer .row {
     margin-left: auto;
     display: flex;
     align-items: center;
-    padding: 5px 20px;
+    padding: 5px 15px;
     color: var(--white-text-color);
     position: relative;
     z-index: 99;
@@ -556,10 +556,10 @@ footer .row {
     transition: 0.5s linear;
   }
   .menu::before {
-    bottom: -5px;
+    top: -5px;
   }
   .menu::after {
-    top: -5px;
+    bottom: -5px;
   }
   .menu span {
     height: 2px;
@@ -576,10 +576,10 @@ footer .row {
     opacity: 0;
   }
   .menu.show::after {
-    transform: rotate(45deg) translateX(10px);
+    transform: rotate(45deg) translateX(-12px);
   }
   .menu.show::before {
-    transform: rotate(-45deg) translateX(13px);
+    transform: rotate(-45deg) translateX(-13px);
   }
   .nav-collapse {
     display: block;
@@ -588,7 +588,13 @@ footer .row {
     bottom: 0;
     width: 60%;
     right: -100%;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background: linear-gradient(
+      179deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(47, 47, 143, 1) 52%,
+      rgba(5, 0, 61, 1) 100%
+    );
     padding-top: 134px;
     transition: 0.5s linear;
   }
